@@ -18,6 +18,7 @@
     --bs-primary: var(--primary-color);
     --bs-body-color: var(--bs-white);
     --bs-body-bg: var(--primary-color);
+    --gradient-border-radius: 15px;
 }
 
 
@@ -27,6 +28,13 @@ html {
 
 body {
     font-family: 'Cutive Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 .btn-outline-primary {
@@ -280,29 +288,59 @@ ul li::before {
     content: none;
 }
 
-.about-row {
+.mt-3rem {
     margin-top: 3rem;
 }
 
-.work-row {
+.px-content {
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+
+.mt-6rem {
     margin-top: 6rem;
 }
 
-/*.gradient-border {*/
-/*    position: relative;*/
-/*    background: var(--secondary-color); !* Background color of the content area *!*/
-/*    padding: 12px; !* Adjust as needed, creates space for the content *!*/
-/*    margin: 25px; !* Space for the pseudo-element to create the border *!*/
-/*}*/
+@keyframes gradientTransform {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
 
-/*.gradient-border:before {*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    top: 0; right: 0; bottom: 0; left: 0;*/
-/*    background: linear-gradient(to right, var(--bs-red), var(--bs-yellow), var(--bs-blue)) !important; !* Define your colors here *!*/
-/*    z-index: -1;*/
-/*    margin: -5px; !* Adjust the size of the border *!*/
-/*}*/
+.gradient-border {
+    position: relative;
+    background: var(--secondary-color); /* Background color of the content area */
+    padding: 0px; /* Adjust as needed, creates space for the content */
+    margin: 0px; /* Space for the pseudo-element to create the border */
+    border-radius: var(--gradient-border-radius);
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(100deg, var(--bs-red), var(--bs-yellow), var(--bs-blue)) !important;
+    z-index: -1;
+    border-radius: var(--gradient-border-radius);
+    margin: -1px; /* Adjust the size of the border */
+    transition: all .35s ease-in-out;
+}
+
+.projects-img {
+    border-radius: var(--gradient-border-radius);
+    max-width: 1140px;
+}
+
+.gradient-border:hover{
+    transform-origin: center;
+    animation: gradientTransform .35s 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
 
 /* Large Breakpoint onwards */
 
@@ -549,7 +587,12 @@ ul li::before {
     }
 
     .navbar-nav .nav-item {
-        padding-right: 1rem;
+        padding-right: .5rem;
+        font-size: 1.25rem;
+    }
+
+    .nav-item:last-child {
+        padding-right: 0;
     }
 
     .my-brand {
@@ -559,7 +602,7 @@ ul li::before {
     }
 
     .hacker-svg {
-        width: 3.5rem;
+        width: 3.15rem;
         align-items: center;
     }
 

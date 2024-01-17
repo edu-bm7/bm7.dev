@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/assets/js/index.js',
@@ -67,7 +68,18 @@ module.exports = {
                     }
                 ]
             },
-            // Add additional loaders here for other file types (e.g., images, fonts)
+            {
+                test: /\.(pdf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'assets/pdf',
+                            name: '[name].[ext]',
+                        },
+                    },
+                ],
+            }
         ]
     },
     devServer: {
@@ -173,6 +185,11 @@ module.exports = {
                 collapseWhitespace: true,
             },
             filename: './pt_BR/fdf.html',
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: './src/assets/img/thumbnail.png', to: 'assets/img/thumbnail.png' },
+            ],
         }),
         new MiniCssExtractPlugin() // Extract CSS into separate files
     ],

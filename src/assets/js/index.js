@@ -6,6 +6,9 @@ import '../img/fdfgen.png'
 import '../img/photo2_bw.jpg'
 import '../img/minishell_img.png'
 import '../img/philo_img.png'
+import '../img/thumbnail.png'
+import '../pdf/CV_Eduardo.pdf'
+import '../pdf/CV_Eduardo_English.pdf'
 import '../../lib/js/bootstrap.bundle.min.js'
 
 const pagesMap = [

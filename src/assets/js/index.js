@@ -91,10 +91,19 @@ function updateSvgLink() {
             translateButton.href = `../${pageName}`;// link to the English version
             translateButtonPt.href = `${pageName}`
         }
+        else if (pageName === '') {
+
+            translateButton.href = `../`;
+            translateButtonPt.href = `pt_BR/`;
+        }
     } else {
         if (pagesMap.includes(pageName)) {
             translateButton.href = `${pageName}`;// link to the English version
             translateButtonPt.href = `pt_BR/${pageName}`;
+        }
+        else if (pageName === '') {
+            translateButton.href = `/`;
+            translateButtonPt.href = `pt_BR/`;
         }
     }
 }

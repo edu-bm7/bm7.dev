@@ -85,18 +85,21 @@ function updateSvgLink() {
     const pageName = currentPath.pop();
 
     // Update the href based on the current URL
+
     if (currentPath.includes('pt_BR')) {
+        console.log('has pt_BR')
         if (pagesMap.includes(pageName)) {
 
             translateButton.href = `../${pageName}`;// link to the English version
             translateButtonPt.href = `${pageName}`
         }
         else if (pageName === '') {
-
-            translateButton.href = `../`;
-            translateButtonPt.href = `pt_BR/`;
+            console.log('pageName is empty');
+            translateButton.href = '../';
+            translateButtonPt.href = './';
         }
     } else {
+        console.log('doesnt have pt_BR')
         if (pagesMap.includes(pageName)) {
             translateButton.href = `${pageName}`;// link to the English version
             translateButtonPt.href = `pt_BR/${pageName}`;

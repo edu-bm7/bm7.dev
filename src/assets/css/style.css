@@ -395,6 +395,30 @@ ul li::before {
     color: var(--bs-white);
 }
 
+.dropdown-toggle:focus {
+    border-color: var(--bs-yellow);
+}
+
+.dropdown-toggle.active{
+    border-color: var(--bs-yellow);
+}
+
+.dropdown-menu li {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu li::before {
+   content: '';
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: var(--bs-yellow);
+    color: var(--bs-blue);
+}
+
 /* Large Breakpoint onwards */
 
 /* Medium Breakpoint */

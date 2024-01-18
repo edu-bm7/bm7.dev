@@ -80,6 +80,7 @@ function updateActiveNavLink(contentId) {
 
 function updateSvgLink() {
     const translateButton = document.querySelector('#translateButton');
+    const translateButtonPt = document.querySelector('#translateButtonPt');
     const currentPath = window.location.pathname.split('/');
     const pageName = currentPath.pop();
 
@@ -87,11 +88,13 @@ function updateSvgLink() {
     if (currentPath.includes('pt_BR')) {
         if (pagesMap.includes(pageName)) {
 
-            translateButton.href = `../${pageName}`; // link to the English version
+            translateButton.href = `../${pageName}`;// link to the English version
+            translateButtonPt.href = `${pageName}`
         }
     } else {
         if (pagesMap.includes(pageName)) {
-            translateButton.href = `pt_BR/${pageName}`; // link to the Portuguese version
+            translateButton.href = `${pageName}`;// link to the English version
+            translateButtonPt.href = `pt_BR/${pageName}`;
         }
     }
 }

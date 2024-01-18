@@ -640,6 +640,7 @@ ul li::before {
     h6 {
         margin-bottom: .5rem;
         margin-top: 0;
+        text-align: left;
     }
 
     .hacker-svg {

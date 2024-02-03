@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat&Source+Code+Pro&display=swap" rel="stylesheet">
-  <title>Projects</title>
+  <title>Minishell</title>
 </head>
 <body class="bm7-bg-secondary">
     <header>
@@ -80,60 +80,56 @@
               <svg id="brFlag" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="BULINE"><circle cx="256" cy="256" fill="#27273d" r="256"/></g><g id="Icons"><circle cx="256" cy="256" fill="#04a558" r="256"/><path d="m295.5 509a257.29 257.29 0 0 1 -39.5 3c-141.38 0-256-114.61-256-256s114.62-256 256-256a257.29 257.29 0 0 1 39.5 3c-110.45 17.14-197.58 104.86-213.79 215.61a259.29 259.29 0 0 0 0 74.78c16.21 110.76 103.34 198.48 213.79 215.61z" fill="#03914a"/><path d="m256 117.5-238.74 138.5 238.74 138.5 238.74-138.5z" fill="#fcc13d"/><path d="m79 256a259 259 0 0 0 2.71 37.39l-64.45-37.39 64.45-37.39a259 259 0 0 0 -2.71 37.39z" fill="#dda22c"/><circle cx="452.31" cy="140.01" fill="#00b564" r="16.28"/><circle cx="430.07" cy="114.41" fill="#00b564" r="11.53"/><path d="m355 256v.74a98 98 0 1 1 0-.74z" fill="#3e436d"/><g fill="#fff"><path d="m355 256.74a98.47 98.47 0 0 1 -7.05 36c-19.67-35.52-52.07-60.92-96.74-75.75-33.93-11.25-65.67-13-79.4-13.1a99 99 0 0 1 22-24.94 293.18 293.18 0 0 1 64.76 13.1c40.76 13.4 73.27 35.32 96.43 64.69z"/><circle cx="188" cy="287" r="7"/><circle cx="221" cy="328" r="7"/><circle cx="256" cy="309.67" r="7"/><circle cx="270" cy="335" r="7"/><circle cx="318" cy="299.67" r="7"/><circle cx="299" cy="322.34" r="7"/><circle cx="270" cy="256" r="7"/><circle cx="188" cy="230" r="7"/><circle cx="221" cy="294" r="7"/></g></g></svg>
             </button>
             <ul class="dropdown-menu">
-              <li><a id="translateButton" href="../projects.html" class="dropdown-item" data-turbo="false">English</a></li>
-              <li><a id="translateButtonPt" href="projects.html" class="dropdown-item" data-turbo="false">Português</a></li>
+              <li><a id="translateButton" href="../minishell.html" class="dropdown-item" data-turbo="false">English</a></li>
+              <li><a id="translateButtonPt" href="minishell.html" class="dropdown-item" data-turbo="false">Português</a></li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-
       <main>
         <turbo-frame id="main_content_pt">
         <div class="container-lg text-center">
           <div class="row justify-content-center mt-3rem">
             <div id="Projetos" class="col-12 text-start px-content">
-              <h2>Projetos</h2>
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' viewBox='0 0 320 512' %3E%3Cpath d='M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z' fill='%23ff5370'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="projects.html" data-turbo-frame="main_content_pt">Projetos</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Minishell</li>
+                </ol>
+              </nav>
               <hr>
-              <p>Abaixo estão meus projetos em destaque, para ver todos os meus projetos e trabalhos, por favor visite minha página no GitHub: <a
-                  href="https://github.com/edu-bm7" target="_blank" rel="noopener noreferrer">github.com/edu-bm7</a></p>
+              <div class="row justify-content-center">
+                <div class="col-lg-9 text-start">
+                  <p>Link: <a href="https://github.com/edu-bm7/minishell" target="_blank" rel="noopener noreferrer">github.com/edu-bm7/minishell</a></p>
+                  <p>Colaborando em uma equipe de dois membros, assumi a ambiciosa tarefa de desenvolver um shell Linux na 42 São Paulo. Esse projeto marcou meu primeiro grande desafio em engenharia de software, onde mergulhei nas complexidades do shell Bash. Nosso objetivo era replicar várias funcionalidades do Bash usando a linguagem de programação C, com um prazo de 6 semanas.</p>
+                  <p>As principais funcionalidades implementadas incluíram:</p>
+                  <ul>
+                    <li><strong>Pipe:</strong> Permitindo que a saída de um comando sirva como entrada para outro, facilitando sequências de comandos complexas.</li>
+                    <li><strong>Operadores Lógicos (AND, OR):</strong> Habilitando a execução condicional de comandos com base no sucesso ou falha de comandos anteriores.</li>
+                    <li><strong>Redirecionamentos and Heredoc:</strong> Redirecionando fluxos de entrada e saída e implementando heredoc para entrada de strings multilinha.</li>
+                    <li><strong>Variáveis de Ambiente:</strong> Manipulando variáveis que afetam o comportamento do shell e da interface do usuário.</li>
+                    <li><strong>Status de Saída:</strong> Acompanhando e relatando o status de saída dos comandos para permitir o tratamento de erros.</li>
+                    <li><strong>Tratamento de Aspas:</strong> Processando com precisão as aspas simples e duplas nas entradas de comandos.</li>
+                    <li><strong>Histórico de Comandos:</strong> Mantendo um histórico de comandos executados para fácil recuperação e execução.</li>
+                    <li><strong>Comandos Internos:</strong> Implementando comandos internos essenciais como 'echo', 'env', 'cd', entre outros, para imitar as funcionalidades principais do Bash.</li>
+                  </ul>
+                  <p>Para gerenciar nossas tarefas de forma eficiente dentro do prazo, empregamos a metodologia Kanban, que aprimorou nossas habilidades de fluxo de trabalho e priorização. Cada semana envolveu desenvolvimento iterativo, testes e refinamento, simulando um ambiente real de desenvolvimento de software.</p>
+                  <p>Além disso, utilizamos extensivamente sistemas de controle de versão para rastrear e gerenciar mudanças no projeto, garantindo um ambiente de codificação sistemático e colaborativo. Essa experiência foi fundamental para aprimorar minhas habilidades técnicas, particularmente em programação de sistemas, e no desenvolvimento de minhas competências em trabalho em equipe e gestão de projetos sob prazos apertados.</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-12 px-content">
-            <div class="row justify-content-between mt-3rem">
-              <div class="col-lg-3 text-center hover-effect">
-                <a href="minishell.html" class="no-links" data-turbo-frame="main_content_pt" data-turbo-action="advance">
-                  <div class="gradient-border">
-                    <img src="../assets/img/minishell_img.png" loading="lazy" class="w-100 projects-img lazy-load" alt="minishell image">
-                  </div>
-                  <h4>Minishell</h4>
-                  <p>Uma implementação colaborativa de um shell Linux que imita o comportamento do Bash, feita em duplas.</p>
-                </a>
-              </div>
-              <div class="col-lg-3 text-center hover-effect">
-                <a href="philosophers.html" class="no-links" data-turbo-frame="main_content_pt" data-turbo-action="advance">
-                  <div class="gradient-border">
-                    <img src="../assets/img/philo_img.png" class="w-100 projects-img lazy-load" loading="lazy" alt="philosophers image">
-                  </div>
-                  <h4>Philosophers</h4>
-                  <p>Soluções para o Problema do Jantar dos Filósofos, uma com Threads/Mutex e outra com Semáforos/Processos.</p>
-                </a>
-              </div>
-              <div class="col-lg-3 text-center hover-effect">
-                <a href="fdf.html" class="no-links" data-turbo-frame="main_content_pt" data-turbo-action="advance">
-                  <div class="gradient-border">
-                    <img src="../assets/img/fdf_img.png" class="w-100 projects-img lazy-load" loading="lazy" alt="fdf image">
-                  </div>
-                  <h4>FdF</h4>
-                  <p>Visualização de dados 3D a partir de coordenadas em uma matriz, representando mapas em uma projeção isométrica para X11.</p>
-                </a>
+            <div class="row justify-content-center mt-3rem">
+              <div class="col-lg-9 text-center gradient-border">
+                <img src="../assets/img/minishell_img.png" loading="lazy" class="w-100 projects-img lazy-load" alt="minishell image">
               </div>
             </div>
           </div>
         </div>
-    </turbo-frame>
+        </turbo-frame>
       </main>
-
   <footer style="color: var(--bs-secondary);" class="text-center mt-3">© 2024 Eduardo Moraes. All Rights Reserved.</footer>
 </body>
 </html>

@@ -99,12 +99,12 @@ module.exports = {
 
         }),
         new HtmlWebpackPlugin({
-            template: './src/pt_BR/index.html', // path to your English index file
+            template: './src/pt-BR/index.html', // path to your English index file
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
             },
-            filename: './pt_BR/index.html', // output file name
+            filename: './pt-BR/index.html', // output file name
         }),
         new HtmlWebpackPlugin({
             template: './src/about.html',
@@ -115,12 +115,12 @@ module.exports = {
             filename: './about.html',
         }),
         new HtmlWebpackPlugin({
-            template: './src/pt_BR/about.html',
+            template: './src/pt-BR/about.html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
             },
-            filename: './pt_BR/about.html',
+            filename: './pt-BR/about.html',
         }),
         new HtmlWebpackPlugin({
             template: './src/projects.html',
@@ -131,12 +131,12 @@ module.exports = {
             filename: './projects.html',
         }),
         new HtmlWebpackPlugin({
-            template: './src/pt_BR/projects.html',
+            template: './src/pt-BR/projects.html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
             },
-            filename: './pt_BR/projects.html',
+            filename: './pt-BR/projects.html',
         }),
         new HtmlWebpackPlugin({
             template: './src/philosophers.html',
@@ -147,12 +147,12 @@ module.exports = {
             filename: './philosophers.html',
         }),
         new HtmlWebpackPlugin({
-            template: './src/pt_BR/philosophers.html',
+            template: './src/pt-BR/philosophers.html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
             },
-            filename: './pt_BR/philosophers.html',
+            filename: './pt-BR/philosophers.html',
         }),
         new HtmlWebpackPlugin({
             template: './src/minishell.html',
@@ -163,12 +163,12 @@ module.exports = {
             filename: './minishell.html',
         }),
         new HtmlWebpackPlugin({
-            template: './src/pt_BR/minishell.html',
+            template: './src/pt-BR/minishell.html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
             },
-            filename: './pt_BR/minishell.html',
+            filename: './pt-BR/minishell.html',
         }),
         new HtmlWebpackPlugin({
             template: './src/fdf.html',
@@ -179,12 +179,12 @@ module.exports = {
             filename: './fdf.html',
         }),
         new HtmlWebpackPlugin({
-            template: './src/pt_BR/fdf.html',
+            template: './src/pt-BR/fdf.html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
             },
-            filename: './pt_BR/fdf.html',
+            filename: './pt-BR/fdf.html',
         }),
         new CopyPlugin({
             patterns: [
